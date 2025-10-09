@@ -129,7 +129,7 @@ With the plugin installed, the files were successfully copied.
 vagrant scp server:/etc/dhcp/dhcpd.conf .
 vagrant scp server:/etc/default/isc-dhcp-server .
 
-## STEP 8: 🤖 Automating Configuration with Vagrant Provisioning
+## STEP 8: Automating Configuration with Vagrant Provisioning
 To make the environment fully reproducible and eliminate manual setup, the configuration was automated using Vagrant's provisioning feature.
 This ensures that `vagrant up` not only creates the VMs but also configures the DHCP server completely without manual intervention.
 
