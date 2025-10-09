@@ -22,4 +22,4 @@ This log tracks the day-by-day progress of the DHCP practice.
   - Troubleshot and resolved a client lease issue by reloading the 'c2' VM.
   - Confirmed correct DNS settings were applied using 'resolvectl status'.
   - We worked as a team on both tasks. I was the one typing the commands, and my partner was typing the documentation, but we decided on the content for both together.
-  - The practice is now 100% complete.
+  - We created the provision script, that it's the last step.
