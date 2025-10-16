@@ -23,3 +23,8 @@ This log tracks the day-by-day progress of the DHCP practice.
   - Confirmed correct DNS settings were applied using 'resolvectl status'.
   - We worked as a team on both tasks. I was the one typing the commands, and my partner was typing the documentation, but we decided on the content for both together.
   - We created the provision script, that it's the last step.
+
+## Day 16/10/25: Review and Final Corrections
+  - Addressed and corrected the errors indicated by the instructor.
+  - Reviewed the server and client configurations to ensure all requirements were met.
+  - Validated the final setup one last time to confirm full functionality.
