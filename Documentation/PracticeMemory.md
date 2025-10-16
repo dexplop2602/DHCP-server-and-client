@@ -137,19 +137,22 @@ With the plugin installed, the files were successfully copied.
       vagrant scp server:/etc/dhcp/dhcpd.conf .
       vagrant scp server:/etc/default/isc-dhcp-server .
 
-## STEP 8: 🤖 Automating Configuration with Vagrant Provisioning
+## STEP 8: Automating Configuration with Vagrant Provisioning
 To make the environment fully reproducible and eliminate manual setup, the configuration was automated using Vagrant's provisioning feature.
 This ensures that `vagrant up` not only creates the VMs but also configures the DHCP server completely without manual intervention.
 
 ### 1. FINAL VAGRANTFILE WITH PROVISIONING:
 The Vagrantfile was updated to include a provisioning block for the 'server' VM.
 
-    --- Provisioning Block ---
-    1. Copy local configuration files to the VM's /tmp/ directory.
-    server.vm.provision "file", source: "dhcpd.conf", destination: "/tmp/dhcpd.conf"
-    server.vm.provision "file", source: "isc-dhcp-server", destination: "/tmp/isc-dhcp-server"
-    2. Execute the external setup script.
-    server.vm.provision "shell", path: "provision.sh"
+ --- Provisioning Block ---
+1. Copy local configuration files to the VM's /tmp/ directory.
+   
+          server.vm.provision "file", source: "dhcpd.conf", destination: "/tmp/dhcpd.conf"
+          server.vm.provision "file", source: "isc-dhcp-server", destination: "/tmp/isc-dhcp-server"
+   
+3. Execute the external setup script.
+   
+          server.vm.provision "shell", path: "provision.sh"
 
 ### 2. PROVISIONING SCRIPT (provision.sh):
 An external script named `provision.sh` was created to contain all the setup commands.
